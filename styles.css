@@ -1,0 +1,353 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #b6aace;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* These blocks are used thoughout to separate flex and abs items */
+.group1 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.group2 {
+    display: contents;
+    position: relative;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    top: 0;
+    background-color: #534A70;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+
+
+img {
+    z-index: -1;
+}
+
+.logo {
+    flex: 0.66;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+
+}
+
+nav {
+    flex: 0.99;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 15px;
+    
+
+}
+
+li.active, li:hover {
+    border: 2px solid #BDB7CA;
+    transition: all 0.3s ease;
+}
+
+
+a {
+    display: inline-block;
+    color: #BDB7CA;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+section {
+    height: 930px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero */
+.hero {
+    margin-top: 170px;
+    background-image: url(background_image1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+#hero_image {
+    z-index: -1;
+}
+.text {
+    padding: 20px;
+    max-width: 500px;
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(222, 220, 226, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+.title {
+    color: #534A70;
+    font-size: 50px;
+    display: inline-block;
+
+}
+
+.subtitle {
+    color: #534A70;
+    font-size: 30px;
+    display: inline-block;
+}
+
+/* About */
+
+.about_text {
+    flex: 1.2;
+    padding: 20px;
+    max-width: 600px;
+    min-width: 500px;
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(222, 220, 226, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Education */
+
+.education_text {
+    flex: 1.5;
+    padding: 10px;
+    max-width: 600px;
+    min-width: 500px;
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(222, 220, 226, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.first_school {
+    padding: 10px;
+    border: 6px solid #534a70;
+    margin-bottom: 30px;
+}
+
+.second_school {
+    padding: 20px;
+    border: 6px solid #bdb7ca;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #655984;
+}
+
+p {
+    color: #655984;
+}
+
+/* Experience */
+
+.experience_text {
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(222, 220, 226, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.jobs {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    
+}
+
+.position {
+    font-style: italic;
+}
+
+.first_job  {
+    padding: 20px;
+    border: 6px solid #534a70;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.second_job {
+    padding: 20px;
+    border: 6px solid #bdb7ca;
+    margin-bottom: 30px;
+    flex: 1;
+
+}
+
+.experience_text ul {
+    list-style: square;
+    display: block;
+    color: #655984;
+}
+
+/* Skills */
+
+.skill_bars {
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(222, 220, 226, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.bar {
+    width: 600px;
+    height: 12px;
+    border: 2px solid #534a70;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.bar_fill {
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#python {
+    background-color: #534a70;
+    width: 0%;
+}
+
+#java {
+    background-color: #655984;
+    width: 0%;
+}
+
+#c {
+    background-color: #7F749C;
+    width: 0%;
+}
+
+#git {
+    background-color: #9C91B8;
+    width: 0%;
+}
+
+#javascript {
+    background-color: #B3A4D9;
+    width: 0%;
+}
+
+#html {
+    background-color: #C1B7DC;
+    width: 0%;
+}
+
+#css {
+    background-color: #CDC6DE;
+    width: 0%;
+}
+
+/* Contact */
+
+section.contact {
+    background-color: #655984;
+}
+
+.contact_block {
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 99;
+    border: 6px solid #534A70;
+    background-color: rgba(133, 114, 170, 0.8);
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+#contact_title {
+    color: #BDB7CA;
+}
+
+.name_field {
+    display: flex;
+    gap: 10px;
+}
+
+#name {
+    flex: 1;
+}
+
+#last_name {
+    flex: 1;
+}
+
+label {
+    color: #BDB7CA; 
+
+}
+
+input {
+    height: 30px;
+    background-color: rgba(133, 114, 170, 0.8);
+    color: #BDB7CA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid #534a70;
+    
+}
+
+textarea {
+    height: 60px;
+    background-color: rgba(133, 114, 170, 0.8);
+    color: #BDB7CA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 400px;
+    max-height: 60px;
+    border: 2px solid #534a70
+}
+
+#submit {
+    color: #655984;
+    margin-top: 20px;
+    height: 30px;
+    background-color: #C1B7DC;
+    font-size: 17px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #C1B7DC;
+    opacity: 0.8;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #C1B7DC;
+    opacity: 0.8;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #C1B7DC;
+    opacity: 0.8;
+  }

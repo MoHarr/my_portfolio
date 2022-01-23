@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="nav">
+        <div class="logo">
+            <img src="./MyPicture.png" alt="Logo">
+        </div>
+        <nav>
+            <ul id="item-list">
+                <li class="home active">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="about">
+                    <a href="#about">About Me</a>
+                </li>
+                <li class="education">
+                    <a href="#education">Education</a>
+                </li>
+                <li class="experience">
+                    <a href="#experience">Experience</a>
+                </li>
+                <li class="skills">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="contact">
+                    <a href="#contact">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero" id="home">
+        <div class="text">
+            <h1 class="title">Hello, world!</h1>
+            <h2 class=subtitle>I'm Morgan, and I'm a developer.</h2>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class="about_me" id="about">
+        <div class="about_text">
+            <h2 class="subtitle">I'm a recent college graduate with 2.5 years of internship experience.</h2>
+            <h2 class="subtitle">I also just got a new job at Aires!</h2>
+        </div>
+        <div class="image" id="about_image"></div>
+    </section>
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <div class="education_text">
+            <h2 class="subtitle">Education</h2>
+            <div class="first_school">
+                <h3>West Virginia Northern Community College</h3>
+                <p>August 2017 - May 2018</p>
+                <p>No Degree</p>
+                <p>GPA: 4.0</p>
+            </div>
+            <div class="second_school">
+                <h3>West Virginia University</h3>
+                <p>August 2018 - December 2021</p>
+                <p>B.S. in Computer Science</p>
+                <p>GPA: 3.9</p>
+            </div>
+        </div>
+        <div class="image" id="education_image"></div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+        <div class="experience_text">
+            <h2 class="subtitle">Experience</h2>
+            <div class="jobs">
+                <div class="first_job">
+                    <h3>Todd Sparkle Market</h3>
+                    <p class="position">Cashier</p>
+                    <p>July 2017 - June 2018</p>
+                    <ul>
+                        <li>Rung up groceries</li>
+                        <li>Cleaned doors, shelves, etc</li>
+                        <li>Stocked Shelves</li>
+                        <li>Answered customers' questions</li>
+                    </ul>
+                </div>
+                <div class="second_job">
+                    <h3>NextGen Federal Systems</h3>
+                    <p class="position">Development Support Intern</p>
+                    <p>May 2019 - January 2022</p>
+                    <ul>
+                        <li>Made successful projects using various python libraries</li>
+                        <li>Trained neural networks on image data</li>
+                        <li>Successfully identified image objects using neural networks</li>
+                        <li>Maintained and improved code of software engineers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="image" id="experience_image"></div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        
+        <div class="skill_bars">
+            <h2 class="subtitle">Skills</h2>
+            <p>Python</p>
+            <div class="bar">
+                <div class="bar_fill" id="python"></div>
+            </div>
+            <p>Java</p>
+            <div class="bar">
+                <div class="bar_fill" id="java"></div>
+            </div>
+            <p>C</p>
+            <div class="bar">
+                <div class="bar_fill" id="c"></div>
+            </div>
+            <p>Git</p>
+            <div class="bar">
+                <div class="bar_fill" id="git"></div>
+            </div>
+            <p>Javascript</p>
+            <div class="bar">
+                <div class="bar_fill" id="javascript"></div>
+            </div>
+            <p>HTML</p>
+            <div class="bar">
+                <div class="bar_fill" id="html"></div>
+            </div>
+            <p>CSS</p>
+            <div class="bar">
+                <div class="bar_fill" id="css"></div>
+            </div>
+        </div>
+        <div class="image" id="skills_image"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact_block">
+            <h2 class="subtitle" id=contact_title>Contact Me</h2>
+            <label for="name">Name</label>
+            <div class="name_field">
+                <input type="text" id="name" name="first_name" placeholder="First" size="22" required>
+                <input type="text" id="last_name" name="last_name" placeholder="Last" size="22" required>
+            </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="example@mail.com">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" cols="100"></textarea>
+            <label for="additional_details">Additional Details</label>
+            <textarea id="additional_details" name="additional_details" rows="3" cols="100"></textarea>
+            <input type="submit" id="submit" value="Send Message">
+        </div>
+        <div class="image"></div>
+    </section>
+
+    <!-- Script -->
+    <script src="portfolio.js"></script>
+</body>
+</html>
