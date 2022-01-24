@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <!-- header -->
     <header class="nav">
         <div class="logo">
-            <img src="./MyPicture.png" alt="Logo">
+            <img src="./images/MyPicture.png" alt="Logo">
+            <div class="icons">
+                <h3 id="my_name">Morgan Harris</h3>
+                <a href="https://www.linkedin.com/in/morgan-harris-61bb5713b/" class="fab fa-linkedin"></a>
+                <a href="https://github.com/MoHarr" class="fab fa-github"></a>
+                <a href="https://www.instagram.com/mo_harr13/" class="fab fa-instagram"></a>
+                <a href="https://www.reddit.com/user/altosax1" class="fab fa-reddit-square"></a>
+            </div>
         </div>
+        
         <nav>
             <ul id="item-list">
                 <li class="home active">
@@ -50,7 +58,7 @@
     <section class="about_me" id="about">
         <div class="about_text">
             <h2 class="subtitle">I'm a recent college graduate with 2.5 years of internship experience.</h2>
-            <h2 class="subtitle">I also just got a new job at Aires!</h2>
+            <h2 class="subtitle">I love to code, draw, sing, and spend time with my boyfriend and cats!</h2>
         </div>
         <div class="image" id="about_image"></div>
     </section>
@@ -59,18 +67,21 @@
     <section class="education" id="education">
         <div class="education_text">
             <h2 class="subtitle">Education</h2>
-            <div class="first_school">
-                <h3>West Virginia Northern Community College</h3>
-                <p>August 2017 - May 2018</p>
-                <p>No Degree</p>
-                <p>GPA: 4.0</p>
+            <div class="schools">
+                <div class="first_school">
+                    <h3>West Virginia Northern Community College</h3>
+                    <p>August 2017 - May 2018</p>
+                    <p>No Degree</p>
+                    <p>GPA: 4.0</p>
+                </div>
+                <div class="second_school">
+                    <h3>West Virginia University</h3>
+                    <p>August 2018 - December 2021</p>
+                    <p>B.S. in Computer Science</p>
+                    <p>GPA: 3.9</p>
+                </div>
             </div>
-            <div class="second_school">
-                <h3>West Virginia University</h3>
-                <p>August 2018 - December 2021</p>
-                <p>B.S. in Computer Science</p>
-                <p>GPA: 3.9</p>
-            </div>
+            
         </div>
         <div class="image" id="education_image"></div>
     </section>
@@ -147,7 +158,17 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="contact_block">
-            <h2 class="subtitle" id=contact_title>Contact Me</h2>
+            <div class="title_section">
+                <h2 class="subtitle" id=contact_title>Contact Me!
+                    <div class="icons" id="contact_icons">
+                        <a href="https://www.linkedin.com/in/morgan-harris-61bb5713b/" class="fab fa-linkedin"></a>
+                        <a href="https://github.com/MoHarr" class="fab fa-github"></a>
+                        <a href="https://www.instagram.com/mo_harr13/" class="fab fa-instagram"></a>
+                        <a href="https://www.reddit.com/user/altosax1" class="fab fa-reddit-square"></a>
+                    </div>
+                </h2>
+            </div>
+            
             <label for="name">Name</label>
             <div class="name_field">
                 <input type="text" id="name" name="first_name" placeholder="First" size="22" required>
