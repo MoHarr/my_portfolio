@@ -6,20 +6,19 @@ body {
     background-color: #b6aace;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
 }
 
-/* These blocks are used thoughout to separate flex and abs items */
-.group1 {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+h2 {
+    font-weight: lighter;
 }
 
-.group2 {
-    display: contents;
-    position: relative;
+h3 {
+    color: #655984;
+}
+
+p {
+    color: #655984;
 }
 
 /* Header */
@@ -36,18 +35,32 @@ header {
     z-index: 999;
 }
 
-
-
-img {
-    z-index: -1;
+.fab {
+    font-size: 30px;
+    text-decoration: none;
+    color: #BDB7CA;
+    margin: 0;
+    padding: 0 5px;
 }
 
 .logo {
     flex: 0.66;
     display: flex;
     justify-content: center;
-    margin-right: 30px;
+    align-items: center;
+}
 
+#my_name {
+    color: #BDB7CA;
+    padding-left: 5px;
+    font-weight: lighter;
+}
+
+.icons {
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
 }
 
 nav {
@@ -72,7 +85,7 @@ nav {
 
 li.active, li:hover {
     border: 2px solid #BDB7CA;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -84,19 +97,20 @@ a {
 }
 
 section {
-    height: 930px;
+    height: 768px;
+    padding-top: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(images/background_image1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Hero */
 .hero {
-    margin-top: 170px;
-    background-image: url(background_image1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    
     display: flex;
 }
 #hero_image {
@@ -116,6 +130,7 @@ section {
     color: #534A70;
     font-size: 50px;
     display: inline-block;
+    font-weight: lighter;
 
 }
 
@@ -134,49 +149,48 @@ section {
     min-width: 500px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.8);
+    background-color: rgba(222, 220, 226, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Education */
 
 .education_text {
-    flex: 1.5;
     padding: 10px;
-    max-width: 600px;
-    min-width: 500px;
+    min-width: 600px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.8);
+    background-color: rgba(222, 220, 226, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
 }
 
+.schools { 
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
 .first_school {
+    flex: 1;
     padding: 10px;
     border: 6px solid #534a70;
     margin-bottom: 30px;
 }
 
 .second_school {
+    flex: 1;
     padding: 20px;
     border: 6px solid #bdb7ca;
     margin-bottom: 30px;
 }
 
-h3 {
-    color: #655984;
-}
-
-p {
-    color: #655984;
-}
-
 /* Experience */
 
 .experience_text {
+    padding: 10px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.8);
+    background-color: rgba(222, 220, 226, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
 
 }
@@ -218,7 +232,7 @@ p {
 .skill_bars {
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.8);
+    background-color: rgba(222, 220, 226, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
@@ -274,6 +288,9 @@ p {
 
 section.contact {
     background-color: #655984;
+    background-image: url(images/background_image2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .contact_block {
@@ -283,9 +300,18 @@ section.contact {
     flex-direction: column;
     gap: 5px;
     z-index: 99;
-    border: 6px solid #534A70;
-    background-color: rgba(133, 114, 170, 0.8);
+    border: 6px solid #BDB7CA;
+    background-color: rgba(133, 114, 170, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title_section {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact_icons {
+    padding-left: 0;
 }
 
 #contact_title {
@@ -315,7 +341,7 @@ input {
     background-color: rgba(133, 114, 170, 0.8);
     color: #BDB7CA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 2px solid #534a70;
+    border: 2px solid #BDB7CA;
     
 }
 
@@ -326,7 +352,7 @@ textarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 400px;
     max-height: 60px;
-    border: 2px solid #534a70
+    border: 2px solid #BDB7CA
 }
 
 #submit {
@@ -335,6 +361,7 @@ textarea {
     height: 30px;
     background-color: #C1B7DC;
     font-size: 17px;
+    cursor: pointer;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
