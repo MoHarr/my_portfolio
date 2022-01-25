@@ -6,7 +6,6 @@ body {
     background-color: #b6aace;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: lighter;
 }
 
 h2 {
@@ -25,11 +24,11 @@ p {
 
 header {
     display: flex;
-    height: 150px;
+    height: 100px;
     width: 100%;
     top: 0;
-    background-color: #534A70;
-    justify-content: center;
+    background-color: rgba(67, 49, 102, 0.9);
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 999;
@@ -44,30 +43,30 @@ header {
 }
 
 .logo {
-    flex: 0.66;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 50px;
+    padding-bottom: 20px;
 }
 
 #my_name {
     color: #BDB7CA;
-    padding-left: 5px;
     font-weight: lighter;
 }
 
 .icons {
-    padding: 0 5px;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     align-items: center;
-    width: 200px;
 }
 
 nav {
-    flex: 0.99;
     display: flex;
     justify-content: center;
     list-style-type: none;
+    padding-right: 50px;
 }
 
 .nav ul {
@@ -79,8 +78,6 @@ nav {
 .nav li {
     display: inline-block;
     font-size: 15px;
-    
-
 }
 
 li.active, li:hover {
@@ -94,6 +91,10 @@ a {
     color: #BDB7CA;
     padding: 15px 15px;
     text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+    
 }
 
 section {
@@ -113,17 +114,21 @@ section {
     
     display: flex;
 }
-#hero_image {
-    z-index: -1;
-}
-.text {
+.hero_text {
     padding: 20px;
     max-width: 500px;
     z-index: 99;
     border: 6px solid #534A70;
     background-color: rgba(222, 220, 226, 0.8);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
-    
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
 }
 
 .title {
@@ -143,7 +148,6 @@ section {
 /* About */
 
 .about_text {
-    flex: 1.2;
     padding: 20px;
     max-width: 600px;
     min-width: 500px;
@@ -156,7 +160,7 @@ section {
 /* Education */
 
 .education_text {
-    padding: 10px;
+    padding: 40px;
     min-width: 600px;
     z-index: 99;
     border: 6px solid #534A70;
@@ -167,12 +171,11 @@ section {
 .schools { 
     display: flex;
     gap: 30px;
-    padding: 20px;
 }
 
 .first_school {
     flex: 1;
-    padding: 10px;
+    padding: 20px;
     border: 6px solid #534a70;
     margin-bottom: 30px;
 }
@@ -187,7 +190,7 @@ section {
 /* Experience */
 
 .experience_text {
-    padding: 10px;
+    padding: 40px;
     z-index: 99;
     border: 6px solid #534A70;
     background-color: rgba(222, 220, 226, 0.9);
@@ -197,9 +200,7 @@ section {
 
 .jobs {
     display: flex;
-    gap: 30px;
-    padding: 20px;
-    
+    gap: 30px;  
 }
 
 .position {
@@ -207,18 +208,15 @@ section {
 }
 
 .first_job  {
-    padding: 20px;
     border: 6px solid #534a70;
-    margin-bottom: 30px;
     flex: 1;
+    padding: 20px;
 }
 
 .second_job {
-    padding: 20px;
     border: 6px solid #bdb7ca;
-    margin-bottom: 30px;
     flex: 1;
-
+    padding: 20px;
 }
 
 .experience_text ul {
@@ -270,17 +268,17 @@ section {
 }
 
 #javascript {
-    background-color: #B3A4D9;
+    background-color: #a99dc7;
     width: 0%;
 }
 
 #html {
-    background-color: #C1B7DC;
+    background-color: #b3a6d4;
     width: 0%;
 }
 
 #css {
-    background-color: #CDC6DE;
+    background-color: #b3a6d4;
     width: 0%;
 }
 
@@ -301,7 +299,7 @@ section.contact {
     gap: 5px;
     z-index: 99;
     border: 6px solid #BDB7CA;
-    background-color: rgba(133, 114, 170, 0.9);
+    background-color: rgba(67, 49, 102, 0.9);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -338,28 +336,28 @@ label {
 
 input {
     height: 30px;
-    background-color: rgba(133, 114, 170, 0.8);
-    color: #BDB7CA;
+    background-color: rgba(67, 49, 102, 0.9);
+    color: rgba(222, 220, 226);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 2px solid #BDB7CA;
+    border: 2px solid rgba(222, 220, 226);
     
 }
 
 textarea {
     height: 60px;
-    background-color: rgba(133, 114, 170, 0.8);
-    color: #BDB7CA;
+    background-color: rgba(67, 49, 102, 0.9);
+    color: rgba(222, 220, 226);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 400px;
     max-height: 60px;
-    border: 2px solid #BDB7CA
+    border: 2px solid rgba(222, 220, 226);
 }
 
 #submit {
     color: #655984;
     margin-top: 20px;
     height: 30px;
-    background-color: #C1B7DC;
+    background-color: rgba(222, 220, 226);
     font-size: 17px;
     cursor: pointer;
 }
