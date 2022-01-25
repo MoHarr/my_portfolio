@@ -1,3 +1,8 @@
+:root {
+    --transparent-purple-light: rgba(222, 220, 226, 0.7);
+    --transparent-purple-dark: rgba(67, 49, 102, 0.7);
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -27,11 +32,13 @@ header {
     height: 100px;
     width: 100%;
     top: 0;
-    background-color: rgba(67, 49, 102, 0.9);
+    background-color: var(--transparent-purple-dark);
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     z-index: 999;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .fab {
@@ -44,15 +51,22 @@ header {
 
 .logo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding-left: 50px;
     padding-bottom: 20px;
+    gap: 10px;
+    
 }
 
 #my_name {
     color: #BDB7CA;
-    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
 }
 
 .icons {
@@ -77,12 +91,12 @@ nav {
 
 .nav li {
     display: inline-block;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 li.active, li:hover {
     border: 2px solid #BDB7CA;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 
@@ -94,7 +108,78 @@ a {
 }
 
 @media screen and (max-width: 960px) {
-    
+    header {
+        background-color: var(--transparent-purple-dark);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        display: grid;
+        grid-template-columns: auto;
+    }
+    nav {
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    .nav li {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    nav.active {
+        background-color: var(--transparent-purple-dark);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        top: 100%;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+    }
+
+    .menu_bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #BDB7CA;
+    }
+
+    .nav ul {
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .nav_toggle .menu_bar {
+        display: block;
+    }
+
+    .nav_toggle {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .menu_bar:nth-child(2) {        
+        opacity: 0;
+    }
+    #mobile-menu.is-active .menu_bar:nth-child(1) {        
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .menu_bar:nth-child(3) {        
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 
 section {
@@ -119,9 +204,17 @@ section {
     max-width: 500px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.8);
+    background-color: var(--transparent-purple-light);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
     position: relative;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+img {
+    height: 150px;
+    width: auto;
+    border: 6px solid #534A70;
 }
 
 .image {
@@ -153,8 +246,10 @@ section {
     min-width: 500px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.9);
+    background-color: var(--transparent-purple-light);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 /* Education */
@@ -164,8 +259,10 @@ section {
     min-width: 600px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.9);
+    background-color: var(--transparent-purple-light);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .schools { 
@@ -193,9 +290,10 @@ section {
     padding: 40px;
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.9);
+    background-color: var(--transparent-purple-light);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
-
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .jobs {
@@ -230,9 +328,11 @@ section {
 .skill_bars {
     z-index: 99;
     border: 6px solid #534A70;
-    background-color: rgba(222, 220, 226, 0.9);
+    background-color: var(--transparent-purple-light);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .bar {
@@ -299,20 +399,28 @@ section.contact {
     gap: 5px;
     z-index: 99;
     border: 6px solid #BDB7CA;
-    background-color: rgba(67, 49, 102, 0.9);
+    background-color: var(--transparent-purple-dark);
     box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .title_section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #contact_icons {
+    display: flex;
+    flex-direction: row;
     padding-left: 0;
 }
 
 #contact_title {
+    display: flex;
+    flex-direction: row;
     color: #BDB7CA;
 }
 
@@ -335,8 +443,9 @@ label {
 }
 
 input {
+    padding-left: 5px;
     height: 30px;
-    background-color: rgba(67, 49, 102, 0.9);
+    background-color: var(--transparent-purple-dark);
     color: rgba(222, 220, 226);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 2px solid rgba(222, 220, 226);
@@ -344,8 +453,9 @@ input {
 }
 
 textarea {
+    padding-left: 5px;
     height: 60px;
-    background-color: rgba(67, 49, 102, 0.9);
+    background-color: var(--transparent-purple-dark);
     color: rgba(222, 220, 226);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 400px;
