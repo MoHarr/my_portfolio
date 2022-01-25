@@ -9,4 +9,4 @@ Contains the html code for the website.
 Contains the styles for the elements of the html file.
 
 ## portfolio.js
-Used for highlighting section tabs by selecting and for simple animations.
+Used for highlighting tabs and simple animations.
