@@ -27,6 +27,10 @@ var skillsMap = new Map([
 
 const sections = document.querySelectorAll('section');
 const header = document.querySelector('header');
+
+const nav = document.querySelector('nav');
+const mobile_menu = document.querySelector('#mobile-menu');
+
 /****************************************************************/
 
 /* 
@@ -81,8 +85,11 @@ window.addEventListener('scroll', ()=> {
     });
 });
 
-
-
-
-
-
+/*
+    This code controls the mobile menu
+****************************************************************/
+mobile_menu.addEventListener('click', ()=> {
+    nav.classList.toggle('active');
+    mobile_menu.classList.toggle('is-active');
+});
+/****************************************************************/
